@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> My Family Book</title>
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <img id="family_member_image" src="https://i.pinimg.com/originals/06/c6/b4/06c6b4eb10378e65b385fb9ec1e4000b.jpg" style="width: 30%;">
+        <h4 id="family_member_name"></h4>
+        <div>
+            <button type="button" onclick="update()"> Next</button>
+        </div>
+        <script>
+            var images = 
+            ["https://i.pinimg.com/originals/06/c6/b4/06c6b4eb10378e65b385fb9ec1e4000b.jpg",
+            "https://image.freepik.com/free-vector/muslim-mother-daughter-hugging_29190-4551.jpg",
+            "https://thumbs.dreamstime.com/b/print-175056460.jpg",
+            "https://islamicrosebooks.files.wordpress.com/2012/01/grandma2.jpg",
+            "https://t3.ftcdn.net/jpg/02/62/72/10/360_F_262721041_9mNNRQadoz552DN2NTFNbGBHN14K9D58.jpg",
+            "https://i.pinimg.com/236x/b7/51/23/b751234dd85e7f89df5d83a4c1efa8cb--cartoon-drawings-drawings-of.jpg",
+            "https://img.favpng.com/9/25/13/clip-art-muslim-cartoon-portable-network-graphics-quran-png-favpng-6Z74SaUDLG4tLz8rndDKnvued.jpg"];
+
+            var names = ["Family Book", "Mom", "Dad", "Grandma", "Grandpa", "Aunt", "Uncle"];
+
+        var i = 0;
+
+function update(){
+i++;
+var number_of_family_members_in_array = 6;
+if(i > number_of_family_members_in_array)
+{
+    i=0;
+}
+var updatedImage = images[i];
+var updatedName = names[i];
+document.getElementById("family_member_image").src = updatedImage;
+document.getElementById("family_member_name").innerHTML = updatedName;
+}
+
+ </script>
+</body>
+</html>
